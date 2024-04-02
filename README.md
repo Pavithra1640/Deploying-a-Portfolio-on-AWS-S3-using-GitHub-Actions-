@@ -8,7 +8,7 @@
 - to create workflow in Github Actions,you can use the YAML-based configuration file.Each step represents a task,such as building your code,running tests or deploying it to a server.
 - By using the github actions you can define your workflow in a simple and straightforward manner.
 - **'Now, Let's Begin the Deployment Process !!! '**
-- **'Step 1: Create a New Repository'**
+- **'Step 1: Create a New Repository in Github'**
 - **'Step 2: Add and Commit Code to GitHub Repository'**
      - Once the repository is created, Use the git commands to commit the code and push it to your GitHub repository
 - **'Step 3: Create an S3 Bucket'**
