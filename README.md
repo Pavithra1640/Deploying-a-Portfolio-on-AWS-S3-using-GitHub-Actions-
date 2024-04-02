@@ -10,7 +10,7 @@
 - Now, Let's Begin the Deployment Process !!!
 - Step 1: Create a New Repository
 - Step 2: Add and Commit Code to GitHub Repository
--     Once the repository is created, add your Portfolio app's code to it. Use the git commands to commit the code and push it to your GitHub repository or use the github UI
+     - Once the repository is created, Use the git commands to commit the code and push it to your GitHub repository
 - Step 3: Create an S3 Bucket
  - AWS Management Console and create an S3 Bucket.Remember to select a region for the bucket. Also allow public access.
 - Step 4: Configure Bucket Policy for Public Access
