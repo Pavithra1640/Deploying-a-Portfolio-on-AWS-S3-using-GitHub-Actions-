@@ -7,7 +7,7 @@
 - Github actions is powerful continuous integration and continuous deployment (CI/CD) platform provided by GitHub.it simplifiles the process of building,testing and deploying code directly-from the github repositories.
 - to create workflow in Github Actions,you can use the YAML-based configuration file.Each step represents a task,such as building your code,running tests or deploying it to a server.
 - By using the github actions you can define your workflow in a simple and straightforward manner.
-- **Now, Let's Begin the Deployment Process !!! **
+- **'Now, Let's Begin the Deployment Process !!! '**
 - **Step 1: Create a New Repository in Github**
 - **Step 2: Add and Commit Code to GitHub Repository**
      - Once the repository is created, Use the git commands to commit the code and push it to your GitHub repository
