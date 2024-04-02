@@ -24,6 +24,9 @@
  - Step 6: Set Up GitHub Secrets for AWS Credentials
         - Go to your GitHub repository, click on "Settings," then "Secrets." go to actions Here, click on "New Repository Secret"  to add your AWS access key and secret key as secrets 
           named AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY, respectively
+   
+   ![github credential](https://github.com/Pavithra1640/Handtime-webapp-project/assets/165140491/72710edf-6d41-41f9-9b15-38bdd085605d)
+
 - Step 7: Create the GitHub Actions Workflow
       - In your GitHub repository, navigate to the "Actions" tab and click on "Set up a workflow yourself."
        - Create a new file named .github/workflows/main.yml
