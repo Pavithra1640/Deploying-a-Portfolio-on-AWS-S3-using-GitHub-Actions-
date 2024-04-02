@@ -15,56 +15,26 @@
  - AWS Management Console and create an S3 Bucket.Remember to select a region for the bucket. Also allow public access.
 - Step 4: Configure Bucket Policy for Public Access
     - To allow public access to the objects in your S3 Bucket, you need to set up a bucket policy.Navigate to the bucket's properties, select "Permissions," and click on "Bucket Policy." Add the following policy
-    - {
-    - "version":"2012-10-17",
-    - "statement":[
-    -      {
-    -  "Sid":"PublicReadForGetBucketObjects",
-    -  "Effect":"Allow",
-    -  "Principal":"*",
-    -  "Action": "S3:GetObject",
-    -  "Resource": "arn:aws:s3:::<bucket name>/*"
-    -      }
-    -    ]
-    -    }
-    -    Step 5: Create an IAM User and Generate Security Credentials
-    -    Assign the necessary IAM policies to this user, allowing access to S3 and any other services 
-         required for your deployment
-    - Generate the IAM User's access key and secret key, as we will need them later to configure GitHub 
-       Secrets.
-   - Step 6: Set Up GitHub Secrets for AWS Credentials
-   - Go to your GitHub repository, click on "Settings," then "Secrets." go to actions Here, click on "New 
-      Repository Secret"  to add your AWS access key and secret key as secrets named AWS_ACCESS_KEY_ID and 
-       AWS_SECRET_ACCESS_KEY, respectively
-  - Step 7: Create the GitHub Actions Workflow
-  - In your GitHub repository, navigate to the "Actions" tab and click on "Set up a workflow yourself."
-  - Create a new file named .github/workflows/main.yml
+    ![s3bucket policy](https://github.com/Pavithra1640/Handtime-webapp-project/assets/165140491/03941175-8b9d-40b6-9aa5-5a04c1ac3df5)
+ -    Step 5: Create an IAM User and Generate Security Credentials
+        -    Assign the necessary IAM policies to this user, allowing access to S3 and any other services 
+             required for your deployment
+        -   Generate the IAM User's access key and secret key, as we will need them later to configure GitHub 
+            Secrets.
+ - Step 6: Set Up GitHub Secrets for AWS Credentials
+        - Go to your GitHub repository, click on "Settings," then "Secrets." go to actions Here, click on "New Repository Secret"  to add your AWS access key and secret key as secrets 
+          named AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY, respectively
+- Step 7: Create the GitHub Actions Workflow
+      - In your GitHub repository, navigate to the "Actions" tab and click on "Set up a workflow yourself."
+       - Create a new file named .github/workflows/main.yml
+  
+![main yaml file](https://github.com/Pavithra1640/Handtime-webapp-project/assets/165140491/933b12c8-0dc3-479c-b4f3-707a4732f2fe) 
  
-  - name: Handtime
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2  # Updated to v2 for the latest version
-
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1
-
-      - name: Deploy static site to S3 bucket
-        run: aws s3 sync . s3://handtimebucket --delete  # Corrected syntax, added "." to sync current 
-           directory
 - Step 8: Commit Changes and Trigger Deployment
 - Step 9: Enable Static Website Hosting for the S3 Bucket
 - Step 10: Access Your Portfolio Website 🌐
+- 
+  ![final output](https://github.com/Pavithra1640/Handtime-webapp-project/assets/165140491/90369160-2e7e-4eef-bf3c-3d0f792324b3)
+
+  ![finalo](https://github.com/Pavithra1640/Handtime-webapp-project/assets/165140491/e3591f7d-5c72-4706-9d7d-55b2fed54d63)
+
